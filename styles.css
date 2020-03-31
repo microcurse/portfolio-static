@@ -21,14 +21,32 @@ h1, h2, h3, h4, h5 {
 }
 
 .container {
-  display: grid;
-  align-self: center;
   padding: 0 8em;
 }
 
-.main-banner {
+.full-container {
+  width: 100%;
+}
+
+.grid {
   display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.main-banner {
   align-items: center;
   height: 50vh;
   background: #efefef;
+}
+
+.stuff-i-do {
+  flex-flow: nowrap;
+}
+
+.stuff-i-do .box {
+  flex: auto;
+  width: 33%;
 }
