@@ -65,6 +65,16 @@ h1, h2, h3, h4, h5 {
 }
 
 .stuff-i-do .box {
-  flex: auto;
-  width: 33%;
+  flex: 1 1 auto;
+}
+
+.stuff-i-do .box img {
+  transition: .2s ease;
+  filter: grayscale(.6);
+  display: block;
+  width: 100%;
+}
+
+.stuff-i-do .box img:hover {
+  filter: grayscale(0);
 }
