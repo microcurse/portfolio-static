@@ -12,21 +12,7 @@ h1, h2, h3, h4, h5 {
   color: #333;
 }
 
-.dark-bg {
-  background: #2f303d;
-}
-
-.white-text {
-  color: #fff;
-}
-
-.container {
-  padding: 0 2rem;
-}
-
-.full-container {
-  width: 100%;
-}
+/* Atomic Stylings */
 
 .grid {
   display: grid;
@@ -36,6 +22,38 @@ h1, h2, h3, h4, h5 {
   display: flex;
 }
 
+.dark-bg {
+  background: #2f303d;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-abs {
+  position: absolute;
+}
+
+.center-caption {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Main Styles */
+
+.container {
+  padding: 0 2rem;
+}
+
+.full-container {
+  width: 100%;
+}
+
 .main-banner {
   align-items: center;
   height: 50vh;
@@ -43,7 +61,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .stuff-i-do {
-  flex-flow: nowrap;
+  flex-flow: row wrap;
 }
 
 .stuff-i-do .box {
