@@ -1,3 +1,5 @@
+/* Resets */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,14 +14,44 @@ h1, h2, h3, h4, h5 {
   color: #333;
 }
 
+nav ul li {
+  list-style: none;
+}
+
+a {
+  transition: .1s ease;
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(54, 100, 185);
+}
+
 /* Atomic Stylings */
 
 .grid {
   display: grid;
 }
 
+.inline-grid {
+  display: inline-grid;
+}
+
 .flex {
   display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.sp-between {
+  justify-content: space-between;
+}
+
+.v-center {
+  align-self: center;
 }
 
 .dark-bg {
@@ -46,6 +78,14 @@ h1, h2, h3, h4, h5 {
 
 /* Main Styles */
 
+header nav ul{
+  display: inline-grid;
+}
+
+header nav a{
+  padding-right: 24px;
+}
+
 .container {
   padding: 0 2rem;
 }
@@ -64,12 +104,17 @@ h1, h2, h3, h4, h5 {
   flex-flow: row wrap;
 }
 
+.stuff-i-do h3 {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+}
+
 .stuff-i-do .box {
   flex: 1 1 auto;
 }
 
 .stuff-i-do .box img {
-  transition: .2s ease;
+  transition: .1s ease;
   filter: grayscale(.6);
   display: block;
   width: 100%;
