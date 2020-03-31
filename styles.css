@@ -51,7 +51,7 @@ a:hover {
 }
 
 .v-center {
-  align-self: center;
+  align-items: center;
 }
 
 .dark-bg {
@@ -78,12 +78,17 @@ a:hover {
 
 /* Main Styles */
 
-header nav ul{
-  display: inline-grid;
+.nav-links li a {
+  height: 100%;
+  padding: 16px;
 }
 
-header nav a{
-  padding-right: 24px;
+.nav-links li a:hover {
+  background-color: #efefef;
+}
+
+.nav-links li {
+  display: inline-block;
 }
 
 .container {
@@ -122,4 +127,12 @@ header nav a{
 
 .stuff-i-do .box img:hover {
   filter: grayscale(0);
+}
+
+@media screen and (max-width: 44em) {
+  nav[role="full-horizontal"] {
+    ul > li {
+      width: 100%;
+    }
+  }
 }
