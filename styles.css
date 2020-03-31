@@ -7,3 +7,28 @@ body {
   font-size: 18px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+h1, h2, h3, h4, h5 {
+  color: #333;
+}
+
+.dark-bg {
+  background: #2f303d;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.container {
+  display: grid;
+  align-self: center;
+  padding: 0 8em;
+}
+
+.main-banner {
+  display: grid;
+  align-items: center;
+  height: 50vh;
+  background: #efefef;
+}
