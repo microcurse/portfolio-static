@@ -1,4 +1,4 @@
-#My Portfolio (Static)#
+#My Portfolio (Static)
 
 I have decided rebuild my portfolio site using regular 'ol HTML, CSS, and JS. I wanted to showcase my foundation in the fundementals.
 
