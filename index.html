@@ -6,17 +6,19 @@
   <title>Marc Reyes-Maninang Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="dark-bg">
 
-  <header class="dark-bg">
+  <header>
     <div class="container flex sp-between v-center flex-row-wrap">
-      <h1 class="white-text">Marc Reyes-Maninang</h1>
-      <button class="nav-button" type="button">Menu</button>
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-toggle-container" for="menu-toggle">
+        <span class="button button-toggle"></span>
+      </label>
       <nav>
         <ul class="nav-links">
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Projects</a> </li>
-          <li><a href="#">Play</a></li>
+          <li><a class="nav-item" href="#">Work</a></li>
+          <li><a class="nav-item" href="#">Projects</a> </li>
+          <li><a class="nav-item" href="#">Play</a></li>
         </ul>
       </nav>
     </div>
@@ -24,6 +26,8 @@
 
     <div class="main-banner grid">
       <div class="container">
+        <div class="circle-placeholder"></div>
+        <h1 class="my-name">Marc Reyes-Maninang</h1>
         <h2>Hello there! <br>
           My name is Marc and I create stuff for the web.</h2>
       </div>

@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  color: #333;
+  color: #fff;
 }
 
 nav ul li {
@@ -25,11 +26,17 @@ a {
 }
 
 a:hover {
-  color: rgb(54, 100, 185);
+  /*color: rgb(54, 100, 185);*/
+}
+
+button {
+  border: 0;
+  padding: 16px;
+  background: none;
 }
 
 /* Main Styles */
-
+/* 
 .nav-links {
   display: none;
 }
@@ -45,6 +52,57 @@ a:hover {
 
 .nav-links li {
   padding: 16px 0;
+} */
+
+.my-name {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: rgb(207, 57, 37);
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked{
+  
+}
+
+.nav-item {
+  position: relative;
+  display: inline-block;
+  float: left;
+  clear: both;
+  color: transparent;
+  font-size: 14px;
+  letter-spacing: -6.2px;
+  height: 7px;
+  line-height: 7px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: scaleY(0.2);
+  transform: .5s, opacity 1s;
+}
+
+.nav-item:nth-child(1){
+  /* letter-spacing: -8px; */
+}
+
+.nav-item:nth-child(n + 4){
+  letter-spacing: -8px;
+  margin-top: -7px;
+  opacity: 0;
+}
+
+.nav-item:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #EC7263;
+  transform: translateY(-50%) scaleY(5);
+  transform: .5s;
 }
 
 .container {
@@ -57,8 +115,9 @@ a:hover {
 
 .main-banner {
   align-items: center;
-  height: 50vh;
-  background: #efefef;
+  text-align: center;
+  min-height: 50vh;
+  /* background: #efefef; */
 }
 
 .stuff-i-do {
@@ -83,6 +142,14 @@ a:hover {
 
 .stuff-i-do .box img:hover {
   filter: grayscale(0);
+}
+
+.circle-placeholder {
+  height: 240px;
+  width: 240px;
+  background: white;
+  border-radius: 100%;
+  margin: auto;
 }
 
 /* Atomic Styles */
@@ -161,7 +228,7 @@ a:hover {
   }
 
   .nav-links li {
-    display: inline-block;
+    display: block;
   }
 
 }

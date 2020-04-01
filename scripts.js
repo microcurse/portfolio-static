@@ -7,7 +7,3 @@ function showNav() {
 
 
 //showNav();
-
-
-
-console.log(navLinks);
