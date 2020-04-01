@@ -28,7 +28,7 @@ a:hover {
   color: rgb(54, 100, 185);
 }
 
-/* Atomic Stylings */
+/* Atomic Styles */
 
 .grid {
   display: grid;
@@ -76,6 +76,10 @@ a:hover {
   transform: translate(-50%, -50%);
 }
 
+.flex-row-wrap {
+  flex-flow: row wrap;
+}
+
 /* Main Styles */
 
 .nav-links li a {
@@ -88,6 +92,7 @@ a:hover {
 }
 
 .nav-links li {
+  padding: 16px 0;
   display: inline-block;
 }
 
@@ -129,10 +134,8 @@ a:hover {
   filter: grayscale(0);
 }
 
-@media screen and (max-width: 44em) {
-  nav[role="full-horizontal"] {
-    ul > li {
-      width: 100%;
-    }
-  }
+/* Media Queries */
+
+@media (min-width: 576px) {
+
 }
