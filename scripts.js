@@ -1,6 +1,14 @@
 /** Responsive Menu Button */
+const menuButton = document.querySelector('.nav-button');
 
-document.querySelector('.nav-button').addEventListener('click', function () {
+menuButton.onclick = function() {
   const navLinks = document.querySelector('.nav-links');
-  navLinks.classList.add('show');
-});
+
+  if ( navLinks.classList.contains('show') ) {
+    navLinks.classList.remove('show');
+    navLinks.classList.add('hide');
+  } else {
+    navLinks.classList.add('show');
+  }
+
+}
