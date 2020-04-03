@@ -1,13 +1,8 @@
-/** Responsive Menu */
+/** Responsive Menu Button */
 
-function showNav() {
+const showNav = function() {
   const navLinks = document.querySelector('.nav-links');
   navLinks.classList.add('show');
 }
 
-
-//showNav();
-
-
-
-console.log(navLinks);
+document.querySelector('.nav-button').addEventListener('click', showNav);
