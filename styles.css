@@ -11,7 +11,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  color: #333;
+  color: #fff;
 }
 
 nav ul li {
@@ -28,7 +28,35 @@ a:hover {
   color: rgb(54, 100, 185);
 }
 
+button {
+  border: 0px;
+  background: transparent;
+  color: #fff;
+}
+
 /* Main Styles */
+
+.nav-button {
+  padding: 16px 0;
+  width: 100%;
+}
+
+.nav-button span {
+  display: block;
+  background-color: #fff;
+  height: 2px;
+  width: 24px;
+  margin: 4px 0;
+  border-radius: 4px;
+}
+
+.nav-button span:nth-child(2) {
+  width: 16px;
+}
+
+.nav-button span:nth-child(3) {
+  width: 20px;
+}
 
 .nav-links {
   display: none;
@@ -58,7 +86,6 @@ a:hover {
 .main-banner {
   align-items: center;
   height: 50vh;
-  background: #efefef;
 }
 
 .stuff-i-do {
@@ -112,7 +139,7 @@ a:hover {
 }
 
 .dark-bg {
-  background: #2f303d;
+  background: #2e3e85;
 }
 
 .white-text {
@@ -155,6 +182,10 @@ a:hover {
 @media (min-width: 992px) {}
 
 @media (min-width: 1200px) {
+
+  .nav-button {
+    display: none;
+  }
 
   .nav-links {
     display: block;

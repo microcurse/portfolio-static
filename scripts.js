@@ -8,6 +8,7 @@ menuButton.onclick = function() {
     navLinks.classList.remove('show');
     navLinks.classList.add('hide');
   } else {
+    navLinks.classList.remove('hide');
     navLinks.classList.add('show');
   }
 
