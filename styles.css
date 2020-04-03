@@ -58,8 +58,14 @@ button {
   width: 20px;
 }
 
+.main-nav {
+  max-height: 180px;
+}
+
 .nav-links {
-  display: none;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+  height: 0;
 }
 
 .nav-links li a {
@@ -165,11 +171,11 @@ button {
 }
 
 .hide {
-  display: none;
+  height: 0;
 }
 
 .show {
-  display: block;
+  height: 180px;
 }
 
 /* Media Queries */
