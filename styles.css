@@ -194,7 +194,7 @@ button {
   }
 
   .nav-links {
-    display: block;
+    height: auto;
   }
 
   .nav-links li {
