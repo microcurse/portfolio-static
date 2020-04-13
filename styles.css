@@ -92,7 +92,7 @@ button {
 }
 
 .container {
-  padding: 0 2rem;
+  padding: 0 1.4rem;
 }
 
 .full-container {
@@ -102,11 +102,11 @@ button {
 .main-banner {
   align-items: center;
   min-height: 50vh;
-  padding: 24px 0;
+  padding: 0 0 2.4rem;
 }
 
 .profile-pic {
-  padding: 24px;
+  padding: 1.5rem;
 }
 
 .intro {
@@ -154,12 +154,16 @@ button {
   margin-bottom: 24px;
 }
 
-.connect .icons {
+.connect .icon {
   padding: 0 4px;
 }
 
-.icons {
-  max-width: 40px;
+.connect .icon a img{
+  color: #2e3e85;
+}
+
+.icon {
+  width: 40px;
 }
 
 footer {
