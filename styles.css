@@ -150,6 +150,22 @@ button {
   filter: grayscale(0);
 }
 
+.connect {
+  margin-bottom: 24px;
+}
+
+.connect .icons {
+  padding: 0 4px;
+}
+
+.icons {
+  max-width: 40px;
+}
+
+footer {
+  padding: 24px 0;
+}
+
 /* Atomic Styles */
 
 .grid {
@@ -176,8 +192,16 @@ button {
   justify-content: space-around;
 }
 
+.h-center {
+  justify-content: center;
+}
+
 .v-center {
   align-items: center;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .dark-bg {
