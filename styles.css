@@ -80,7 +80,7 @@ p {
 }
 
 section {
-  padding: 1rem 0;
+  padding: 2.4rem 0;
 }
 
 .nav-button {
@@ -141,16 +141,10 @@ section {
 .main-banner {
   align-items: center;
   min-height: 50vh;
-  padding: 0 0 2.4rem;
-}
-
-.profile-pic {
-  padding: 1.5rem;
 }
 
 .intro {
   max-width: 640px;
-
 }
 
 .intro h1 {
@@ -166,8 +160,19 @@ section {
   font-weight: bold;
 }
 
+section .flex {
+  column-gap: 2rem;
+}
+
 .box {
-  flex: 1 1 auto;
+  flex-grow: 1;
+}
+
+.box h2 {
+  color: #fff;
+  font-size: 4.2rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
 }
 
 .box img {
