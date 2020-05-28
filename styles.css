@@ -31,8 +31,8 @@ nav ul li {
 }
 
 a {
-  /* transition: color .1s ease; */
-  text-decoration: none;
+  color: var(--btn-primary);
+  font-size: 20px;
 }
 
 a:active, 
@@ -48,15 +48,15 @@ button {
   border: 0px;
   background: transparent;
   font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  font-size: 20px;
   cursor: pointer;
-  font-size: 16px;
   font-weight: 600;
-  padding: 8px 16px;
+  padding: .6rem 1rem;
   border-radius: 2px;
+  color: #fff;
 }
 
 p {
-  font-size: 20px;
   line-height: 30px;
 }
 
@@ -75,8 +75,16 @@ p {
 /* Main Styles */
 
 .main-btn {
-  color: var(--dark);
   background-color: var(--btn-primary);
+}
+
+.link-btn {
+  padding: 1rem;
+}
+
+.secondary-btn {
+  color: #fff;
+  background-color: var(--secondary);
 }
 
 section {
@@ -119,6 +127,7 @@ section {
   height: 100%;
   padding: 16px;
   color: var(--light);
+  text-decoration: none;
 }
 
 .nav-links li a:hover {
@@ -143,6 +152,10 @@ section {
   min-height: 50vh;
 }
 
+.main-banner img {
+  padding-bottom: 1.4rem;
+}
+
 .intro {
   max-width: 640px;
 }
@@ -162,6 +175,18 @@ section {
 
 section .flex {
   column-gap: 2rem;
+}
+
+.connect {
+  margin: 1.2rem 0;
+}
+
+.connect .icon {
+  padding: 0 4px;
+}
+
+.icon {
+  width: 2rem;
 }
 
 .box {
@@ -186,18 +211,6 @@ section .flex {
 .box img:hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
-}
-
-.connect {
-  margin-bottom: 24px;
-}
-
-.connect .icon {
-  padding: 0 4px;
-}
-
-.icon {
-  width: 40px;
 }
 
 footer {
