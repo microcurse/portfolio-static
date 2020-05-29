@@ -9,15 +9,15 @@
 <body class="dark-bg">
 
   <header>
-    <div class="container">
-      
-      <button class="nav-button" type="button">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav class="main-nav">
-        <ul class="nav-links">
+    <div class="flex x-center sp-between">
+      <nav class="main-nav flex x-center sp-between" role="navigation">
+        <div id="logo" class="circle"></div>
+        <!-- <button class="nav-button" type="button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button> -->
+        <ul class="nav-links flex">
           <li><a href="#">Work</a></li>
           <li><a href="#">Projects</a> </li>
           <li><a href="#">Play</a></li>
@@ -27,15 +27,16 @@
     </div>
   </header>
 
+  <main>
     <section class="main-banner">
-      <div class="container flex x-center y-center flex-flow-rw">
+      <div class="flex x-center y-center flex-flow-rw">
         <img src="/images/bambi-circle-blue-min.png" alt="">
         <div class="intro">
           <h1>Hello there! <br>
             My name is <span>Marc</span> and I create stuff for the web.</h1>
-          <p>I'm a <span>front end designer</span> and <span>developer</span> with 8 years of experience building websites from small to large businesses.</p>
+          <p>I'm a <span>front end designer</span> and <span>developer</span> with a passion the web, technology, and Star Wars. Father of two cats and a puppy!</p>
           <button class="main-btn" type="button">Get in touch</button>
-          <a class="link-btn" href="#">See Resume</a>
+          <a class="link-btn" href="#">See my resume</a>
           <div class="connect">
             <a href="https://github.com/microcurse"><img class="icon" src="/images/github.svg" alt="github"></a>
             <a href="https://codepen.io/nemorx"><img class="icon" src="/images/codepen.svg" alt="codepen"></a>
@@ -46,30 +47,16 @@
         </div> <!-- end intro -->
       </div><!-- end container flex -->
     </section>
-<!-- 
-    <section class="flex flex-flow-rw">
-      <a href="#" class="box pos-rel">
-          <img src="https://source.unsplash.com/random/400x320" alt="">
-          <h2 class="pos-abs center-caption">Work</h2>
-      </a>
-      <a href="#" class="box pos-rel ">
-          <img src="https://source.unsplash.com/random/400x320" alt="">
-          <h2 class="pos-abs center-caption">Projects</h2>
-      </a>
-      <a href="#" class="box pos-rel">
-          <img src="https://source.unsplash.com/random/400x320" alt="">
-          <h2 class="pos-abs center-caption">Play</h2>
-      </a>
-    </section><!-- end section flex -->
 
-    <section class="text-center">
-      <h2>Skills</h2>
-      <div class="container flex flex-flow-rw x-center y-center">
-        <div class="card">
-          <img src="http://placehold.it/250" alt="">
-        </div>
-    </section> -->
-
+    <section>
+        <h2>Skills</h2>
+        <div class="container flex flex-flow-rw x-center y-center">
+          <div class="card">
+            <img src="http://placehold.it/250" alt="">
+          </div>
+    </section>
+  </main>
+    
   <footer class="text-center">
     
     Marc Reyes-Maninang 2020
