@@ -55,8 +55,9 @@ nav ul li {
 }
 
 a {
-  color: var(--btn-primary);
-  font-size: 20px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 a:active, 
@@ -104,7 +105,7 @@ header {
 }
 
 section {
-  padding: var(--pad);
+  /* padding: var(--pad); */
 }
 
 .circle {
@@ -136,8 +137,8 @@ section {
 }
 
 .nav-links li a:hover {
-  /* color: var(--dark);
-  background-color: var(--light); */
+  color: var(--btn-primary);
+  text-decoration: underline;
 }
 
 .nav-links li:not(:last-of-type) {
@@ -282,12 +283,8 @@ footer {
   flex-flow: row wrap;
 }
 
-.hide {
-  height: 0;
-}
-
-.show {
-  height: 180px;
+.padding {
+  padding: var(--pad);
 }
 
 /* Media Queries */
