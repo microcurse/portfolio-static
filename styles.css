@@ -217,6 +217,23 @@ section h2:before {
           filter: grayscale(0);
 }
 
+.card {
+  max-width: 350px;
+}
+
+/* Tags */
+.built-with {
+  display: inline-block;
+}
+
+.built-with li {
+  font-size: .8rem;
+  background: var(--primary);
+  border-radius: 1rem;
+  padding: 2px 8px;
+  margin: 1px;
+}
+
 footer {
   padding: 24px 0;
 }
