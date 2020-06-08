@@ -6,7 +6,7 @@
 :root {
   --primary: #5465FF;
   --secondary: #6B8EAD;
-  --btn-primary: #EE6C4D;
+  --btn-primary: #EE6C4D;f
   --light: #E0FBFC;
   --dark: #293241;
   --gray: #3D5A80;
@@ -50,7 +50,7 @@ nav {
   width: 100%;
 }
 
-nav ul li {
+ul li {
   list-style: none;
 }
 
