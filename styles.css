@@ -91,10 +91,6 @@ header {
   padding: var(--pad);
 }
 
-section .flex {
-  column-gap: 2rem;
-}
-
 .container {
   padding: 0 1.4rem;
 }
@@ -221,6 +217,10 @@ section h2:before {
   max-width: 350px;
 }
 
+.card:not(:first-child) {
+  margin-left: 14px;
+}
+
 /* Stuff I've made */
 .built-with li {
   font-size: .8rem;
@@ -294,7 +294,7 @@ footer {
   flex-flow: row wrap;
 }
 
-.padding {
+.padded {
   padding: var(--pad);
 }
 
