@@ -4,6 +4,7 @@
 /* Variables */
 
 :root {
+  font-size: 24px;
   --primary: #5465FF;
   --secondary: #6B8EAD;
   --btn-primary: #EE6C4D;
@@ -25,7 +26,6 @@
 }
 
 body {
-  font-size: 20px;
   font-family: 'Source Sans Pro', sans-serif;
   color: #fff;
 }
@@ -223,7 +223,7 @@ section h2:before {
 
 /* Stuff I've made */
 .built-with li {
-  font-size: .8rem;
+  font-size: .6rem;
   background: var(--primary);
   border-radius: 1rem;
   padding: 2px 8px;
