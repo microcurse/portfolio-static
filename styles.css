@@ -4,17 +4,20 @@
 /* Variables */
 
 :root {
-  font-size: 24px;
-  --primary: #5465FF;
+  font-size: 20px;
+  --primary: #085E7A;
   --secondary: #6B8EAD;
-  --btn-primary: #EE6C4D;
+  --btn-primary: #0E99C7;
   --light: #E0FBFC;
   --dark: #293241;
+  --darker: #1f2329;
   --gray: #3D5A80;
 }
 
 :root {
-  --pad: calc(2vw + 0.25rem);
+  --pad-lg: calc(2vw + 0.25rem);
+  --pad-md: calc(1.5vw + 0.25rem);
+  --pad-sm: calc(1vw + 0.25rem);
 }
 
 /* Resets */
@@ -31,7 +34,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  line-height: 2.8rem;
+  /* line-height: 2.8rem; */
 }
 
 h1 {
@@ -56,7 +59,7 @@ ul li {
 
 a {
   color: #fff;
-  font-size: 1.1rem;
+  font-size: .8rem;
   font-weight: 600;
 }
 
@@ -136,7 +139,6 @@ header {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1rem;
   font-weight: 700;
   letter-spacing:3;
 }
@@ -160,16 +162,14 @@ header {
   padding-bottom: 1.4rem;
 }
 
-.intro {
-  max-width: 640px;
-}
-
 .intro h1 {
   margin-bottom: 16px;
+  font-size: 3rem;
 }
 
 .intro p {
   margin-bottom: 24px;
+
 }
 
 .intro span {
@@ -200,34 +200,20 @@ section h2:before {
   flex-grow: 1;
 }
 
-.box img {
-  transition: .1s ease;
-  -webkit-filter: grayscale(.6);
-          filter: grayscale(.6);
-  display: block;
-  width: 100%;
-}
-
-.box img:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-}
-
 .card {
-  max-width: 350px;
+  max-width: 300px;
+  background: var(--darker);
+  border-radius: 4px;
 }
 
-.card:not(:first-child) {
-  margin-left: 14px;
+.flex .card {
+  flex: 1 1 33%;
 }
 
 /* Stuff I've made */
 .built-with li {
   font-size: .6rem;
-  background: var(--primary);
-  border-radius: 1rem;
-  padding: 2px 8px;
-  margin: 1px;
+  padding: 4px;
 }
 
 footer {
@@ -238,6 +224,9 @@ footer {
 
 .grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1em;
 }
 
 .inline-grid {
@@ -290,12 +279,36 @@ footer {
   transform: translate(-50%, -50%);
 }
 
+.mg-center {
+  margin: 0 auto;
+}
+
 .flex-flow-rw {
   flex-flow: row wrap;
 }
 
-.padded {
-  padding: var(--pad);
+.pad-lg {
+  padding: calc(2vw + 0.25rem);
+}
+
+.pad-md {
+  padding: calc(1.5vw + 0.25rem);
+}
+
+.pad-sm {
+  padding: calc(1vw + 0.25rem);
+}
+
+.max-w-sm {
+  max-width: 600px;
+}
+
+.max-w-md {
+  max-width: 900px;
+}
+
+.max-w-lg {
+  max-width: 1200px;
 }
 
 /* Media Queries */
