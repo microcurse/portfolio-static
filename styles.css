@@ -1,16 +1,17 @@
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
 
 /* Variables */
 
 :root {
   font-size: 20px;
-  --primary: #085E7A;
+  --primary: #e49835;
   --secondary: #6B8EAD;
-  --btn-primary: #0E99C7;
+  --btn-primary: #2682a3;
   --light: #E0FBFC;
-  --dark: #293241;
-  --darker: #1f2329;
+  --dark: rgb(28, 31, 36);
+  --darker: #131416;
   --gray: #3D5A80;
 }
 
@@ -34,7 +35,8 @@ body {
 }
 
 h1, h2, h3, h4 {
-  /* line-height: 2.8rem; */
+  font-family: 'Rubik', sans-serif;
+  padding: 20px 0;
 }
 
 h1 {
@@ -61,11 +63,6 @@ a {
   color: #fff;
   font-size: .8rem;
   font-weight: 600;
-}
-
-a:active, 
-a:visited {
-  color: var(--btn-primary);
 }
 
 a:hover {
@@ -162,14 +159,8 @@ header {
   padding-bottom: 1.4rem;
 }
 
-.intro h1 {
-  margin-bottom: 16px;
-  font-size: 3rem;
-}
-
 .intro p {
   margin-bottom: 24px;
-
 }
 
 .intro span {
@@ -185,8 +176,35 @@ header {
   padding: 0 4px;
 }
 
-.icon {
-  width: 2rem;
+.connect a {
+  font-size: 1.4rem;
+  display: inline-block;
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.connect a:hover {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.connect li {
+  padding: 0 12px 0 0;
+}
+
+/* Stuff I've made */
+.built-with {
+  padding: 0 0 12px 0;
+}
+
+.built-with li {
+  font-size: .6rem;
+}
+
+.built-with li:not(:first-child){
+  padding-left: 8px;
 }
 
 section h2:before {
@@ -206,14 +224,20 @@ section h2:before {
   border-radius: 4px;
 }
 
+.card h4 {
+  padding: 0 0 12px 0;
+}
+
 .flex .card {
   flex: 1 1 33%;
 }
 
-/* Stuff I've made */
-.built-with li {
-  font-size: .6rem;
-  padding: 4px;
+.sm-caption {
+  color: var(--primary);
+  text-transform: uppercase;
+  font-size: .8rem;
+  font-weight: 600;
+  padding: 0 0 12px 0;
 }
 
 footer {
@@ -225,7 +249,7 @@ footer {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-rows: repeat(auto-fit, minmax(300px, 1fr)); */
   grid-gap: 1em;
 }
 
