@@ -69,16 +69,9 @@ a:hover {
   color: var(--btn-primary);
 }
 
-button {
-  border: 0px;
-  background: transparent;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1rem;
-  cursor: pointer;
-  font-weight: 600;
-  padding: .6rem 1rem;
+a:hover, a:active, a:focus {
+  outline: 2px dashed var(--primary);
   border-radius: 2px;
-  color: #fff;
 }
 
 p {
@@ -97,6 +90,21 @@ header {
 
 .full-container {
   width: 100%;
+}
+
+.button {
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  padding: .6rem 1rem;
+  border-radius: 2px;
+  color: #fff;
+  transition: ;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: #fff;
 }
 
 .main-btn {
@@ -127,8 +135,8 @@ header {
 }
 
 /* Navigation */
-.nav-links {
-  transition: all .5s ease-in-out;
+.nav-links a{
+  transition: all .1s ease-in-out;
 }
 
 .nav-links li a {
