@@ -25,6 +25,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
 }
@@ -69,9 +70,8 @@ a:hover {
   color: var(--btn-primary);
 }
 
-a:hover, a:active, a:focus {
+a:active, a:focus {
   outline: 2px dashed var(--primary);
-  border-radius: 2px;
 }
 
 p {
@@ -79,10 +79,6 @@ p {
 }
 
 /* Main Styles */
-
-header {
-  padding: var(--pad);
-}
 
 .container {
   padding: 0 1.4rem;
@@ -329,6 +325,11 @@ footer {
 
 .pad-sm {
   padding: calc(1vw + 0.25rem);
+}
+
+.pad-y-lg {
+  padding-top: calc(2vw + 0.25rem);
+  padding-bottom: calc(2vw + 0.25rem);
 }
 
 .max-w-sm {
