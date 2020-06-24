@@ -70,7 +70,7 @@ a:hover {
   color: var(--btn-primary);
 }
 
-a:active, a:focus {
+a:focus {
   outline: 2px dashed var(--primary);
 }
 
