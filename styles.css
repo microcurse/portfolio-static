@@ -66,13 +66,15 @@ a {
   font-weight: 600;
 }
 
-a:hover {
+a:hover,a:focus {
   color: var(--btn-primary);
+  outline: none;;
 }
 
+/* 
 a:focus {
   outline: 2px dashed var(--primary);
-}
+} */
 
 p {
   line-height: 30px;
@@ -93,14 +95,17 @@ p {
   cursor: pointer;
   font-weight: 600;
   padding: .6rem 1rem;
+  border: 2px solid transparent;
   border-radius: 2px;
   color: #fff;
-  transition: ;
+  transition: .1s;
   text-decoration: none;
 }
 
-.button:hover {
+.button:hover, .button a:hover, .button a:focus, button a:active {
   color: #fff;
+  border: 2px solid var(--btn-primary);
+  background: none;
 }
 
 .main-btn {
@@ -223,7 +228,6 @@ section h2:before {
 }
 
 .card {
-  max-width: 300px;
   background: var(--darker);
   border-radius: 4px;
 }
@@ -253,7 +257,6 @@ footer {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* grid-template-rows: repeat(auto-fit, minmax(300px, 1fr)); */
   grid-gap: 1em;
 }
 
