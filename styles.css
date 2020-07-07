@@ -66,9 +66,8 @@ a {
   font-weight: 600;
 }
 
-a:hover,a:focus {
+a:hover{
   color: var(--btn-primary);
-  outline: none;;
 }
 
 /* 
@@ -81,6 +80,11 @@ p {
 }
 
 /* Main Styles */
+
+#logo {
+  fill: var(--primary); 
+  max-width: 48px;
+}
 
 .container {
   padding: 0 1.4rem;
