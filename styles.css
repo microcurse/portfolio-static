@@ -21,6 +21,11 @@
   --pad-sm: calc(1vw + 0.25rem);
 }
 
+svg:not(:root) {
+  height: 100%;
+  width: 100%;
+}
+
 /* Resets */
 * {
   margin: 0;
