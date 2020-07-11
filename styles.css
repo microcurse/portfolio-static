@@ -75,11 +75,6 @@ a:hover{
   color: var(--btn-primary);
 }
 
-/* 
-a:focus {
-  outline: 2px dashed var(--primary);
-} */
-
 p {
   line-height: 30px;
 }
