@@ -10,4 +10,3 @@ My approach to styling is focused on _mostly_ utility classes. I'll be refactori
 2. JSON Copy of Resume
 3. "Stuff I've made" filter by tags
 4. Contact form
-  - This might prove more challenging. I think I'll have to use PHP for the form to submit data. Need to consider my options still.
