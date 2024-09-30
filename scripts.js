@@ -8,12 +8,34 @@ document.addEventListener('DOMContentLoaded', function() {
     contactForm.style.display = 'block';
   });
 
-  form.addEventListener('submit', function(event) {
+  form.addEventListener('submit', async function(event) {
     event.preventDefault();
     if (validateForm()) {
-      // Form is valid, you can submit it or send the data via AJAX
-      alert('Form submitted successfully!');
-      closeForm();
+      const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+      };
+
+      try {
+        const response = await fetch('https://emails.marc-maninang.workers.dev/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+
+        if (response.ok) {
+          alert('Form submitted successfully!');
+          closeForm();
+        } else {
+          alert('Failed to submit form.');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('Failed to submit form.');
+      }
     }
   });
 });
