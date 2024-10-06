@@ -3,45 +3,58 @@ document.addEventListener('DOMContentLoaded', function() {
   const contactForm = document.getElementById('contactForm');
   const form = document.querySelector('.form-container');
 
-  contactButton.addEventListener('click', function(event) {
-    event.preventDefault();
-    contactForm.style.display = 'block';
-  });
+  if (contactButton) {
+    contactButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      contactForm.style.display = 'block';
+    });
+  } else {
+    console.error('Contact button not found');
+  }
 
-  form.addEventListener('submit', async function(event) {
-    event.preventDefault();
-    if (validateForm()) {
-      const formData = {
-        name: form.name.value,
-        email: form.email.value,
-        message: form.message.value
-      };
+  if (form) {
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault();
+      if (validateForm()) {
+        const formData = {
+          name: form.name.value,
+          email: form.email.value,
+          message: form.message.value
+        };
 
-      try {
-        const response = await fetch('https://emails.marc-maninang.workers.dev/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(formData)
-        });
+        try {
+          const response = await fetch('https://emails.marc-maninang.workers.dev/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          });
 
-        if (response.ok) {
-          alert('Form submitted successfully!');
-          closeForm();
-        } else {
+          if (response.ok) {
+            alert('Form submitted successfully!');
+            closeForm();
+          } else {
+            alert('Failed to submit form.');
+          }
+        } catch (error) {
+          console.error('Error submitting form:', error);
           alert('Failed to submit form.');
         }
-      } catch (error) {
-        console.error('Error submitting form:', error);
-        alert('Failed to submit form.');
       }
-    }
-  });
+    });
+  } else {
+    console.error('Form container not found');
+  }
 });
 
 function closeForm() {
-  document.getElementById('contactForm').style.display = 'none';
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.style.display = 'none';
+  } else {
+    console.error('Contact form not found');
+  }
 }
 
 function validateForm() {
