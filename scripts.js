@@ -28,8 +28,16 @@ function setupFormSubmission(form) {
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (validateForm(form)) {
-      const formData = gatherFormData(form);
-      await submitForm(formData);
+      grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute('6LfAAFkqAAAAAEXidCVBWUWlW0a0GItFKkelGnyG', { action: 'SUBMIT' });
+        if (token) {
+          const formData = gatherFormData(form);
+          formData.recaptchaToken = token; // Add the reCAPTCHA token to the form data
+          await submitForm(formData);
+        } else {
+          alert('reCAPTCHA verification failed. Please try again.');
+        }
+      });
     }
   });
 }
