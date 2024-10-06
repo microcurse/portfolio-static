@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactButton = document.querySelector('.button');
   const contactForm = document.getElementById('contactForm');
   const form = document.querySelector('.form-container');
+  form.addEventListener('submit', onClick);
 
   setupContactButton(contactButton, contactForm);
   setupFormSubmission(form);
@@ -28,16 +29,8 @@ function setupFormSubmission(form) {
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (validateForm(form)) {
-      grecaptcha.enterprise.ready(async () => {
-        const token = await grecaptcha.enterprise.execute('6LfAAFkqAAAAAEXidCVBWUWlW0a0GItFKkelGnyG', { action: 'SUBMIT' });
-        if (token) {
-          const formData = gatherFormData(form);
-          formData.recaptchaToken = token; // Add the reCAPTCHA token to the form data
-          await submitForm(formData);
-        } else {
-          alert('reCAPTCHA verification failed. Please try again.');
-        }
-      });
+      const formData = gatherFormData(form);
+      await submitForm(formData);
     }
   });
 }
@@ -62,7 +55,7 @@ async function submitForm(formData) {
 
     if (response.ok) {
       alert('Form submitted successfully!');
-      toggleFormDisplay(document.getElementById('contactForm'), false);
+      closeForm();
     } else {
       alert('Failed to submit form.');
     }
@@ -70,6 +63,11 @@ async function submitForm(formData) {
     console.error('Error submitting form:', error);
     alert('Failed to submit form.');
   }
+}
+
+function closeForm() {
+  const contactForm = document.getElementById('contactForm');
+  toggleFormDisplay(contactForm, false);
 }
 
 function toggleFormDisplay(formElement, isVisible) {
@@ -84,13 +82,7 @@ function validateForm(form) {
   const name = form.name;
   const email = form.email;
   const message = form.message;
-  const honeyPot = document.querySelector('input[name="hiddenField"]').value;
   let isValid = true;
-
-  if (honeyPot) {
-    console.error('Bot detected!');
-    return false; // block form submission
-  } 
 
   clearErrors();
 
@@ -134,4 +126,11 @@ function clearErrors() {
 function validateEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(email);
+}
+
+function onClick(e) {
+  e.preventDefault();
+  grecaptcha.enterprise.ready(async () => {
+    const token = await grecaptcha.enterprise.execute('6LfAAFkqAAAAAEXidCVBWUWlW0a0GItFKkelGnyG', {action: 'SUBMIT'});
+  });
 }
