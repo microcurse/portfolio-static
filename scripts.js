@@ -76,7 +76,13 @@ function validateForm(form) {
   const name = form.name;
   const email = form.email;
   const message = form.message;
+  const honeyPot = document.querySelector('input[name="hiddenField"]').value;
   let isValid = true;
+
+  if (honeyPot) {
+    console.error('Bot detected!');
+    return false; // block form submission
+  } 
 
   clearErrors();
 
