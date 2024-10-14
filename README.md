@@ -9,4 +9,4 @@ My approach to styling is focused on _mostly_ utility classes. I'll be refactori
 1. CodePen Embeds of my favorite work
 2. JSON Copy of Resume
 3. "Stuff I've made" filter by tags
-4. Contact form
+~~4. Contact form~~
