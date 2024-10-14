@@ -134,3 +134,39 @@ function onClick(e) {
     const token = await grecaptcha.enterprise.execute('6LfAAFkqAAAAAEXidCVBWUWlW0a0GItFKkelGnyG', {action: 'SUBMIT'});
   });
 }
+
+// Function to load JSON file
+async function loadMyWork() {
+  try {
+    // Fetch the JSON file
+    const RESPONSE = await fetch('myWork.json');
+    const DATA = await RESPONSE.json();
+
+    // Get the container where projects will be added
+    const MY_WORK_CONTAINER = document.getElementById('stuff-i-made');
+
+    // Iterate over the 'sites' data and create HTML elements
+    DATA.sites.forEach(site => {
+      const PROJECT_CARD = document.createElement('div');
+      PROJECT_CARD.classList.add( 'project-card', 'card', 'pad-sm');
+
+      PROJECT_CARD.innerHTML = `
+        <div class="sm-caption">Website</div>
+        <h3>${site.name}</h3>
+        <p>${site.description}</p>
+        <ul class="built-with flex flex-flow-rw">
+          ${site.technologies.map(item => `<li><i class="devicon-${item.icon}-plain"></i> ${item.name}</li>`).join('')}
+        </ul>
+        <a href="${site.url}" target="_blank" rel="noreferrer">Visit Website</a>
+      `;
+
+      // Append the project card to the container
+      MY_WORK_CONTAINER.appendChild(PROJECT_CARD);
+    });
+
+  } catch (error) {
+    console.log('Error loading JSON file:', error);
+  }
+}
+
+loadMyWork();
