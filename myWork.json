@@ -4,25 +4,50 @@
       "name": "Forbes Industries",
       "description": "Forbes Industries' catalog website enables users to submit RFQs through custom WooCommerce modifications, built on a fully custom theme with Advanced Custom Fields (ACF) for custom content types such as cocktail recipes and rep groups. Products are meticulously tagged with custom attributes, allowing for intuitive filtering and navigation to enhance the user experience. Integrated with HubSpot through a custom built plugin using their API, the site also supports marketing automation and lead generation.",
       "url": "https://forbesindustries.com",
-      "technologies": ["WordPress", "WooCommerce", "HubSpot", "PHP", "JavaScript", "HTML", "CSS"]
+      "technologies": [
+        { "name": "WordPress", "icon": "wordpress" },
+        { "name": "WooCommerce", "icon": "woocommerce" },
+        { "name": "PHP", "icon": "php" },
+        { "name": "JavaScript", "icon": "javascript" },
+        { "name": "HTML", "icon": "html5" },
+        { "name": "CSS", "icon": "css3" }
+      ]
     },
     { 
       "name": "Nationwide Apostille",
       "description": "This website was built for a client to help build business online and accept quotes for documentation and apostille services. I built a form with complex logic to display and hide fields based on field selections. The theme was custom built ontop of a starter theme with custom post types and fields using ACF.",
       "url": "https://nationwideapostille.com",
-      "technologies": ["WordPress", "PHP", "JavaScript", "HTML", "CSS"]
+      "technologies": [
+        { "name": "WordPress", "icon": "wordpress" },
+        { "name": "PHP", "icon": "php" },
+        { "name": "JavaScript", "icon": "javascript" },
+        { "name": "HTML", "icon": "html5" },
+        { "name": "CSS", "icon": "css3" }
+      ]
     },
     {
       "name": "The City of Arroyo Grande",
       "description": "The City of Arroyo Grande's website was built to be a hub for events, recreation, businesses, and licenses. The site includes a custom theme and a variety of custom post types and fields for easy content management. It also features a custom events calendar and a custom document management system.",
       "url": "https://arroyogrande.org",
-      "technologies": ["WordPress", "PHP", "JavaScript", "HTML", "CSS"]
+      "technologies": [
+        { "name": "WordPress", "icon": "wordpress" },
+        { "name": "PHP", "icon": "php" },
+        { "name": "JavaScript", "icon": "javascript" },
+        { "name": "HTML", "icon": "html5" },
+        { "name": "CSS", "icon": "css3" }
+      ]
     },
     { 
       "name": "RG Pacific",
       "description": "Main website for RG Pacific, a marketing agency in California. This site was built by highly customizing a premium theme. The site utilizes ACF for custom post types and fields for easy content management.",
       "url": "https://rgpacific.com",
-      "technologies": ["WordPress", "PHP", "JavaScript", "HTML", "CSS"]
+      "technologies": [
+        { "name": "WordPress", "icon": "wordpress" },
+        { "name": "PHP", "icon": "php" },
+        { "name": "JavaScript", "icon": "javascript" },
+        { "name": "HTML", "icon": "html5" },
+        { "name": "CSS", "icon": "css3" }
+      ]
     }
   ],
   "plugins": [
@@ -30,13 +55,19 @@
       "name": "HubSpot Cart Data",
       "description": "This cart utilizes HubSpot's API to send cart and user data to HubSpot for marketing automation and lead generation. This is data is used to create custom workflows and allows for more targeted marketing.",
       "url": "https://github.com/microcurse/cart-data-hubspot",
-      "technologies": ["PHP"]
+      "technologies": [
+        { "name": "PHP", "icon": "php" }
+      ]
     },
     {
       "name": "Display Product Dimensions",
       "description": "This plugin utilizes WooCommerce hooks to display custom product dimensions to the product page.",
       "url": "https://github.com/microcurse/display-product-dimensions",
-      "technologies": ["PHP", "CSS", "JavaScript"]
+      "technologies": [
+        { "name": "PHP", "icon": "php" },
+        { "name": "CSS", "icon": "css3" },
+        { "name": "JavaScript", "icon": "javascript" }
+      ]
     }
   ],
   "projects": [
@@ -44,19 +75,31 @@
       "name": "JavaScript Calculator",
       "description": "This program uses vanilla JavaScript to create a simple calculator. It uses a combination of HTML, CSS, and JavaScript to create a fully functional calculator.",
       "url": "https://htmlpreview.github.io/?https://github.com/microcurse/js-calculator/blob/master/index.html",
-      "technologies": ["JavaScript", "HTML", "CSS"]
+      "technologies": [
+        { "name": "JavaScript", "icon": "javascript" },
+        { "name": "HTML", "icon": "html5" },
+        { "name": "CSS", "icon": "css3" }
+      ]
     },
     {
       "name": "Rock Paper Scissors Game",
       "description": "This program uses vanilla JavaScript to create a simple Rock Paper Scissors game. It uses a combination of HTML, CSS, and JavaScript to create a fully functional game with a graphical user interface.",
       "url": "https://htmlpreview.github.io/?https://github.com/microcurse/rock-paper-scissors/blob/master/rps.html",
-      "technologies": ["JavaScript", "HTML", "CSS"]
+      "technologies": [
+        { "name": "JavaScript", "icon": "javascript" },
+        { "name": "HTML", "icon": "html5" },
+        { "name": "CSS", "icon": "css3" }
+      ]
     },
     {
       "name": "Etch-a-Sketch",
       "description": "This program uses vanilla JavaScript to create a digital replica of the popular children's toy, the Etch-a-Sketch. Some complexities were introduces including randomized color modes on each tile upon hover.",
       "url": "https://htmlpreview.github.io/?https://github.com/microcurse/Etch-a-Sketch/blob/master/etch-a-sketch.html",
-      "technologies": ["JavaScript", "HTML", "CSS"]
+      "technologies": [
+        { "name": "JavaScript", "icon": "javascript" },
+        { "name": "HTML", "icon": "html5" },
+        { "name": "CSS", "icon": "css3" }
+      ]
     }
   ]
 }
