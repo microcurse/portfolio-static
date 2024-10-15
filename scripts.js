@@ -151,13 +151,18 @@ async function loadMyWork() {
       PROJECT_CARD.classList.add( 'project-card', 'card', 'pad-sm');
 
       PROJECT_CARD.innerHTML = `
-        <div class="sm-caption">Website</div>
-        <h3>${site.name}</h3>
-        <p>${site.description}</p>
-        <ul class="built-with flex flex-flow-rw">
-          ${site.technologies.map(item => `<li><i class="devicon-${item.icon}-plain"></i> ${item.name}</li>`).join('')}
-        </ul>
-        <a href="${site.url}" target="_blank" rel="noreferrer">Visit Website</a>
+        <div class="project-card-content">
+          <img src="${site.image}" alt="${site.name} Image" class="project-image">
+          <div class="project-details">
+            <div class="sm-caption">Website</div>
+            <h3>${site.name}</h3>
+            <p>${site.description}</p>
+            <ul class="built-with flex flex-flow-rw">
+              ${site.technologies.map(item => `<li><i class="devicon-${item.icon}-plain"></i> ${item.name}</li>`).join('')}
+            </ul>
+            <a href="${site.url}" target="_blank" rel="noreferrer">Visit Website</a>
+          </div>
+        </div>
       `;
 
       // Append the project card to the container
