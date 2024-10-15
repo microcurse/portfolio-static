@@ -6,7 +6,6 @@ My approach to styling is focused on _mostly_ utility classes. I'll be refactori
 
 ## Upcoming Features
 
-1. CodePen Embeds of my favorite work
-2. JSON Copy of Resume
-3. "Stuff I've made" filter by tags
-~~4. Contact form~~
+1. JSON Copy of Resume
+2. "Stuff I've made" filter by tags
+3. Career Timeline
