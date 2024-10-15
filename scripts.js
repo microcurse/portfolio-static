@@ -140,7 +140,7 @@ async function loadMyWork() {
     const RESPONSE = await fetch('myWork.json');
     const DATA = await RESPONSE.json();
 
-    const MY_WORK_CONTAINER = document.getElementById('stuff-i-made');
+    const MY_WORK_CONTAINER = document.querySelector('#stuff-i-made .card-container');
 
     const createProjectCard = (item, type) => {
       const PROJECT_CARD = document.createElement('div');
