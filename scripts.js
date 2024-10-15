@@ -135,39 +135,40 @@ function onClick(e) {
   });
 }
 
-// Function to load JSON file
 async function loadMyWork() {
   try {
-    // Fetch the JSON file
     const RESPONSE = await fetch('myWork.json');
     const DATA = await RESPONSE.json();
 
-    // Get the container where projects will be added
     const MY_WORK_CONTAINER = document.getElementById('stuff-i-made');
 
-    // Iterate over the 'sites' data and create HTML elements
-    DATA.sites.forEach(site => {
+    const createProjectCard = (item, type) => {
       const PROJECT_CARD = document.createElement('div');
-      PROJECT_CARD.classList.add( 'project-card', 'card', 'pad-sm');
+      PROJECT_CARD.classList.add('project-card', 'card', 'pad-sm');
 
       PROJECT_CARD.innerHTML = `
         <div class="project-card-content">
-          <img src="${site.image}" alt="${site.name} Image" class="project-image">
+          <img src="${item.image}" alt="${item.name} Image" class="project-image">
           <div class="project-details">
-            <div class="sm-caption">Website</div>
-            <h3>${site.name}</h3>
-            <p>${site.description}</p>
+            <div class="sm-caption">${type}</div>
+            <h3>${item.name}</h3>
+            <p>${item.description}</p>
             <ul class="built-with flex flex-flow-rw">
-              ${site.technologies.map(item => `<li><i class="devicon-${item.icon}-plain tech-${item.icon}"></i> ${item.name}</li>`).join('')}
+              ${item.technologies.map(tech => `<li><i class="devicon-${tech.icon}-plain tech-${tech.icon}"></i> ${tech.name}</li>`).join('')}
             </ul>
-            <a class="button main-btn" href="${site.url}" target="_blank" rel="noreferrer">Visit Website</a>
+            <a class="button main-btn" href="${item.url}" target="_blank" rel="noreferrer">Visit ${type}</a>
           </div>
         </div>
       `;
 
-      // Append the project card to the container
       MY_WORK_CONTAINER.appendChild(PROJECT_CARD);
-    });
+    };
+
+    DATA.sites.forEach(site => createProjectCard(site, 'Website'));
+
+    DATA.projects.forEach(project => createProjectCard(project, 'Project'));
+
+    DATA.plugins.forEach(plugin => createProjectCard(plugin, 'Plugin'));
 
   } catch (error) {
     console.log('Error loading JSON file:', error);
