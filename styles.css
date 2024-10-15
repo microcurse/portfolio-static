@@ -21,6 +21,55 @@
   --pad-sm: calc(1vw + 0.25rem);
 }
 
+/* Technology Colors */
+.tech-html5 {
+  color: #E34C26;
+}
+
+.tech-css3 {
+  color: #1572B6;
+}
+
+.tech-javascript {
+  color: #F7DF1E;
+}
+
+.tech-react {
+  color: #61DAFB;
+}
+
+.tech-nodejs {
+  color: #68A063;
+}
+
+.tech-wordpress {
+  color: #21759B;
+}
+
+.tech-php {
+  color: #777BB4;
+}
+
+.tech-jekyll {
+  color: #CC0000;
+}
+
+.tech-ruby {
+  color: #CC342D;
+}
+
+.tech-python {
+  color: #3776AB;
+}
+
+.tech-flask {
+  color: #000000;
+}
+
+.tech-jquery {
+  color: #0769AD;
+}
+
 svg {
   height: 100%;
   width: 100%;
@@ -66,12 +115,12 @@ ul li {
 }
 
 a {
-  color: #fff;
+  color: var(--btn-primary);
   font-weight: 600;
 }
 
 a:hover{
-  color: var(--btn-primary);
+  color: white;
 }
 
 p {
@@ -94,6 +143,7 @@ p {
 }
 
 .button {
+  display: inline-block;
   font-size: 1rem;
   cursor: pointer;
   font-weight: 600;
@@ -190,6 +240,7 @@ p {
 
 .connect a {
   font-size: 1.4rem;
+  color: #fff;
   display: inline-block;
   transform: perspective(1px) translateZ(0);
   -webkit-transition-duration: 0.2s;
@@ -199,6 +250,7 @@ p {
 }
 
 .connect a:hover {
+  color: var(--btn-primary);
   transform: scale(1.1) rotate(4deg);
 }
 

@@ -158,9 +158,9 @@ async function loadMyWork() {
             <h3>${site.name}</h3>
             <p>${site.description}</p>
             <ul class="built-with flex flex-flow-rw">
-              ${site.technologies.map(item => `<li><i class="devicon-${item.icon}-plain"></i> ${item.name}</li>`).join('')}
+              ${site.technologies.map(item => `<li><i class="devicon-${item.icon}-plain tech-${item.icon}"></i> ${item.name}</li>`).join('')}
             </ul>
-            <a href="${site.url}" target="_blank" rel="noreferrer">Visit Website</a>
+            <a class="button main-btn" href="${site.url}" target="_blank" rel="noreferrer">Visit Website</a>
           </div>
         </div>
       `;
