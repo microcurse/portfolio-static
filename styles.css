@@ -294,11 +294,11 @@ p {
 .project-card {
   display: flex;
   flex-direction: column;
-  max-width: 32%;
   align-items: center;
   background-color: var(--darker);
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%; /* Ensure the card takes full width on mobile */
 }
 
 .project-card-content {
@@ -356,6 +356,20 @@ section h2:before {
 
 footer {
   padding: 24px 0;
+}
+
+/* Responsive Styles */
+
+@media (min-width: 768px) {
+  .project-card {
+    max-width: 48%; /* Adjust the max-width for tablets and larger screens */
+  }
+}
+
+@media (min-width: 992px) {
+  .project-card {
+    max-width: 32%; /* Adjust the max-width for desktops and larger screens */
+  }
 }
 
 /* Utility Styles */

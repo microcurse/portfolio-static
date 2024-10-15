@@ -165,10 +165,8 @@ async function loadMyWork() {
     };
 
     DATA.sites.forEach(site => createProjectCard(site, 'Website'));
-
-    DATA.projects.forEach(project => createProjectCard(project, 'Project'));
-
     DATA.plugins.forEach(plugin => createProjectCard(plugin, 'Plugin'));
+    DATA.projects.forEach(project => createProjectCard(project, 'Project'));
 
   } catch (error) {
     console.log('Error loading JSON file:', error);
